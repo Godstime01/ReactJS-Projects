@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+:root {
+    --scissors-gradient: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    --paper-gradient: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    --rock-gradient: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    /* --lizard-gradient: linear-gradient(to right, hsl(261, 73%, 60%), hsl(261, 72%, 63%)); */
+    --cyan: linear-gradient(to right, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+
+    --dark-text: hsl(229, 25%, 31%);
+    --score-text: hsl(229, 64%, 46%);
+    --header-outline: hsl(217, 16%, 45%);
+
+    --radial-gradient: radial-gradient(circle at 100%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--radial-gradient);
+    color: white;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+
+/* header */
+.header {
+    max-width: 80%;
+    margin-inline: auto;
+    padding: 1em 2em;
+    border-radius: 1rem;
+    border: 5px var(--header-outline) solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 2rem;
+
+    .header-score {
+        font-size: 2em;
+        font-weight: 700;
+        color: var(--dark-text);
+        background-color: white;
+        border-radius: inherit;
+        padding: inherit;
+        display: inherit;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1px;
+        align-items: center;
+
+        div {
+            font-size: 2.4em;
+            margin-inline: 0;
+            margin-block: 0;
+        }
+    }
+}
+
+
+.button-group {
+    background-image: url("/images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    margin-block-start: 8rem;
+    min-height: 300px;
+    position: relative;
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+
+.btn {
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    text-align: center;
+    outline: 0;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    /* padding:2em; */
+    transition: all .3s ease-out;
+    box-shadow: inset 0 -8px 0 0 rgba(0, 0, 0, .2);
+
+    div {
+        background-color: white;
+        box-shadow: inset 0 8px 0 0 rgba(0, 0, 0, .2);
+    }
+}
+
+.btn:hover {
+    color: #444;
+}
+
+.btn:active {
+    color: #222;
+    box-shadow: inset 0 -8px 0 0 rgba(0, 0, 0, .2);
+}
+
+.result-screen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    max-width: 60%;
+    margin-inline: auto;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* this style is to reset the position absolute for the selected button */
+
+    .btn {
+        position: static;
+        transform: translate(0, 0);
+    }
+
+    .play-again-btn {
+        padding: 1em 3em;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .result {
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+}
