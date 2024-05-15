@@ -1,4 +1,4 @@
-import { ModeToggle } from "./theme-toggle"
+import { ModeToggle } from "./shadcn/ui/theme-toggle"
 
 const Navbar = () => {
   return (

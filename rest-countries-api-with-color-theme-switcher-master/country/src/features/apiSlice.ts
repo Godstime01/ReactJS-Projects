@@ -1,15 +1,15 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const countryApi = createApi(
     {
         reducerPath: "countryApi",
-        baseQuery: fetchBaseQuery({ baseUrl: "https://restcountries.eu/rest/v2/" }),
+        baseQuery: fetchBaseQuery({ baseUrl: "https://restcountries.com/v3.1/" }),
         endpoints: (builder) => ({
-            getCountries: builder.query({
+            getAllCountry: builder.query({
                 query: () => "all",
             }),
         }),
     }
 )
 
-export const { useCountryQuery } = countryApi
+export const { useGetAllCountryQuery } = countryApi

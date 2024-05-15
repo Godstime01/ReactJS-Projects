@@ -1,12 +1,12 @@
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
+    // NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
+    // NavigationMenuViewport,
 } from "@/components/shadcn/ui/navigation-menu"
 
 

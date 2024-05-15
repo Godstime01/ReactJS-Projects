@@ -1,6 +1,6 @@
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/shadcn/ui/theme-provider"
 import Navbar from "./components/navbar"
-import CountryList from "./components/country-list"
+import CountryListPage from "./components/country-list-page"
 import { store } from './features/store'
 import { Provider } from 'react-redux'
 
@@ -9,7 +9,7 @@ function App() {
     <Provider store={store}>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <Navbar />
-        <CountryList />
+        <CountryListPage />
       </ThemeProvider>
     </Provider>
   )
