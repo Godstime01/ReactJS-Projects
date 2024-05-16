@@ -1,6 +1,6 @@
 import SearchInput from "./search"
 import Filter from "./filter"
-import CountryList from "./country-list"
+import CountryList from "./countryList"
 
 
 const CountryListPage = () => {
